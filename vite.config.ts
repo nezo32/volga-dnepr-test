@@ -10,6 +10,7 @@ process.env = { ...process.env, ...loadEnv('app', process.cwd()) };
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  // Adding Vuetify plugin
   plugins: [vue(), vuetify({ autoImport: true })],
   resolve: {
     alias: {

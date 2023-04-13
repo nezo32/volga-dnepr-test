@@ -8,6 +8,6 @@
 
 <style scoped lang="scss">
 .loading {
-  width: 80vh;
+  height: 80vh;
 }
 </style>

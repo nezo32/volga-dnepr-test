@@ -23,8 +23,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+// Variable to store the theme of the project
 const theme = ref('dark')
 
+// Function to change theme
 const changeTheme = () => {
   theme.value = theme.value === 'light' ? 'dark' : 'light'
 }

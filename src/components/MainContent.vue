@@ -1,6 +1,6 @@
 <template>
-  <VCard class="rounded-xl w-100">
-    <div class="pa-5">
+  <VCard class="main rounded-xl w-100">
+    <div class="main__inner d-flex flex-column pa-5">
       <slot />
     </div>
   </VCard>
@@ -8,4 +8,12 @@
 
 <script setup lang="ts"></script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.main {
+  height: fit-content;
+
+  &__inner {
+    gap: 20px;
+  }
+}
+</style>
