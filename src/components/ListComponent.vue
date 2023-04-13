@@ -1,6 +1,8 @@
 <template>
   <VCard variant="tonal" class="rounded-xl" v-for="(v, i) of display" :key="i">
-    <div class="pa-5 d-flex justify-space-between align-center">
+    <div
+      class="pa-5 d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row justify-space-between align-center"
+    >
       <div class="d-flex align-center text-h4">
         <strong class="text-primary">{{ v.origin }}</strong>
         <VIcon icon="mdi-arrow-right-thick" size="x-small" color="primary" />
@@ -14,13 +16,15 @@
     </div>
     <VDivider />
     <div class="pa-5">
-      <div class="d-flex pb-2 text-h6">
-        <div>Date of departure: {{ dateTransform(v.depart_date) }}</div>
-        <div class="pl-4" v-if="!one_way">Return date: {{ dateTransform(v.return_date) }}</div>
+      <div class="d-flex flex-column flex-sm-row flex-md-row flex-lg-row flex-xl-row pb-2 text-h6">
+        <div>Departure date: {{ dateTransform(v.depart_date) }}</div>
+        <div class="pl-sm-4 pl-md-4 pl-lg-4 pl-xl-4" v-if="!one_way">
+          Return date: {{ dateTransform(v.return_date) }}
+        </div>
       </div>
-      <div>Ticket at: {{ ticketDateTransform(v.found_at) }}</div>
-      <div>Airline company: {{ v.gate }}</div>
-      <div>Number of transfers: {{ v.number_of_changes }}</div>
+      <div class="pb-1">Ticket at: {{ ticketDateTransform(v.found_at) }}</div>
+      <div class="pb-1">Airline company: {{ v.gate }}</div>
+      <div class="pb-1">Number of transfers: {{ v.number_of_changes }}</div>
 
       <div>Distance: {{ v.distance }}km</div>
     </div>
